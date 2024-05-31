@@ -1,0 +1,44 @@
+/*
+1. Aspectos gerais - estilos na estrutura geral da página:
+- tamanho fixo 
+- fonte do tipo sans-serif
+- Indente os parágrafos em 1em
+
+2. Títulos:
+- Alinhar todos a direita.
+- h1 tamanho 1.8rem
+- h2 tamanho 1.4rem
+- h3 tamanho 1.2rem
+
+3.Localizar e aplicar 
+- Alinhar a direita seção resumo
+- Espaçamento entre linhas 1.5 aos parágrafos seção principal.
+
+4. Abreviaturas::
+- Customizar todas fonte carregada small-caps*/
+
+ html
+ {
+  background: #bcecb6; /* Cor de fundo verde menta */
+  color: #ab3cb3; /* Cor para fonte (violeta) */
+
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif, Verdana, Tahoma, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+ }
+
+ p {text-indent: 1em;}
+
+ h1, h2, h3 
+ {
+  color: rgb(134, 116, 116);
+  font-weight: 700;
+  text-align: center;
+ }
+ 
+ h1 {font-size: 1.8rem;}
+ h2 {font-size: 1.4rem;}
+ h3 {font-size: 1.2rem; }
+
+.sumary {text-align: right;}
+.main p {line-height: 1.5;}
+abbr {font-variant: small-caps;}
