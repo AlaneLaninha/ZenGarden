@@ -1,0 +1,15 @@
+ /*Paleta de cores com três cores: 
+ uma cor de fundo:verde menta .background {color: mintcream}
+ uma cor para fonte: roxo .principal {color: blueviolet }
+ uma cor de destaque: cinza escuro para titulos h1,h2,h3 .destaque{color: dimgray;*/ 
+
+ html
+ {
+  background: #bcecb6; /* Cor de fundo verde menta */
+  color: #ab3cb3; /* Cor para fonte (cinza escuro) */
+ }
+ h1, h2, h3 
+{
+  color: #9815f6;
+}
+ 
