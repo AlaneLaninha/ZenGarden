@@ -1,0 +1,199 @@
+html
+/*STYLE*/
+ {
+  background: #bcecb6; /* Cor de fundo verde menta */
+  color: #ab3cb3; /* Cor para fonte (violeta) */
+
+  /*ESTILIZAÇÃO*/
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif, Verdana, Tahoma, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+ }
+
+ p {text-indent: 1em;}
+
+ h1, h2, h3 /*estilização de títulos*/
+ {
+  color: rgb(134, 116, 116);
+  font-weight: 700;
+  text-align: center;
+ }
+
+ /*tamanho de cada título*/
+ h1 {font-size: 1.8rem;}
+ h2 {font-size: 1.4rem;}
+ h3 {font-size: 1.2rem;} 
+
+.sumary {text-align: right;}
+.main p {line-height: 1.5;}
+abbr {font-variant: small-caps;}
+
+/*BOX MODEL*/
+/*1.Definir diretivas gerais da página.
+- Largura geral da página em 80%
+- limitar o máx: 1280px largura
+- Centralizar página na tela
+- Definir altura seção introdução 550px
+- Remover o container #design-archives da renderização da página*/
+
+.page-wrapper
+{
+ width: 80%;
+ max-width: 1280px;
+ margin: 0 auto; 
+}
+
+#zen-intro
+{height: 550px;}
+
+/*2. Incrementar cabeçalho da página
+
+- Inverter cor do cabeçalho para fundo escuro e fonte clara
+- Colocar título e subtítulo lado-a-lado. Manter espaçamento entre eles e o restante da página
+- Adicionar espaçamento lateral: 1em ao título principal*/
+
+#zen-intro header
+{
+    background: #ab3cb3; /*Cor de fundo violeta*/
+    color: #bcecb6; /*Cor de fonte verde-menta*/
+    font-weight: 700;
+    text-align: center;
+}
+
+#design-archives 
+{ display: none;} /*Remove da exibição e não do html*/
+
+/*h1 e h2 lado a lado*/
+header h1,h2 
+{ display: inline-block;} /*para manter o espaçamento vertical*/
+
+header h1 
+{margin-right: 1em;} /*Espaçamento lateral do título h1*/
+
+/*3. Incrementar menus
+- Remover bullets dos itens de menu no painel lateral
+- Aumentar espaçamento entre os itens do menu para 1em
+- Centralizar os itens em cada menu.*/
+
+aside ul
+{list-style-type: none;} /*não exibir o bullets(marcador) da lista*/
+
+aside ul li 
+{
+    margin: 1em; /* Espaçamento entre itens */
+    text-align: center; 
+}
+
+/*4. Aplicar inversão de cores no rodapé para ganhar contraste em relação à página
+- Adicionar 4% espaçamento externo rodapé
+- Transformar cada link do rodapé em caixa com borda sólida 2px e espaçamento interno 0.5em*/
+
+.main footer 
+{margin-top: 4%;} /* Espaçamento externo */
+
+
+.main footer a
+{
+    border: solid 2px rgb(131, 54, 123); /* Borda sólida */
+    padding: 0.5em; /*Espaçamento interno*/
+    display: inline-block; /*considerar espaçamento da borda*/
+    color: green; /*fonte do link do rodapé*/
+}
+
+/*POSICIONAMENTO*/
+/* 1. Definir .page-wrapper referência para posicionamento */
+.page-wrapper 
+{position: relative;}
+
+/* 2. Fazer o painel .explanation ocupar 60% largura disponível, Criar um espaçamento a direita de 35% utilizando margin .
+- Adicionar borda à direita do painel de 1px, cor #1f295c
+- Adicionar espaçamento interno de 2% lado direito do painel. */
+
+.explanation 
+{
+    width: 60%;
+    margin-right: 35%;
+    border-right: #1f295c solid 1px;
+    padding-right: 2%;
+}
+
+/* 3. Movendo o menu de designs para a direita da página 
+_ Iniciar na parte superior da página, após a parte de introdução, ex: top:560px ).
+- Iniciar após a direita do elemento .explanation (por exemplo, aplicando left: 62% ).
+- Adicione um espaçamento interno horizontal de 2% no menu para centralizá-lo.*/
+
+#design-selection 
+{
+    position: absolute;
+    top: 532px; /* Melhor posicionamento verticalmente*/
+    left: 60%; /* Melhor posicionamento, após o elemento .explanation horizontalmente*/
+    padding-left:1%; 
+    padding-right:1% /* Centralizando no espaçamento interno horizontal*/
+}
+
+/*FLEXBOX
+1. Aplique o flexbox no rodapé da seção principal, e posicione os links centralizados e com espaçamento entre eles.
+- Defina um mesmo tamanho para os links.
+- Tratar o caso de quebra de linha.*/
+
+.supporting footer
+{ 
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap:  wrap;
+}
+
+footer a 
+{
+    width: 100px; /* Define a largura desejada */
+    height: 30px; /* Define a altura desejada */
+    text-align: center; /* Centraliza o texto */
+    line-height: 30px; /* Garante que o texto esteja centralizado verticalmente */
+}
+
+/*2. Configure um layout de flexbox para a seção de benefícios dessa forma:
+- O texto à esquerda, e o título à direita.
+- O título centralizado verticalmente.
+- O texto ocupará aprox. 70% da largura, e o título 30%.*/
+
+/*4. Inclua linha no topo e embaixo das seções de benefícios com a propriedade border-bottom e border-top respectivamente.*/
+
+.benefits 
+{
+    display: flex; /*layout flexbox seção de benefícios*/
+    border-top: #1f295c;
+    border-bottom: #1f295c solid 1px;
+}
+
+.benefits h3
+{
+       order: 2; /* ordem do título (à direita -posição 2)*/
+       justify-content: space-evenly; /*centralizando verticalmente*/
+       flex-basis: 30%;
+       align-self: center; /*alinhamento do titulo*/
+}
+    
+    .benefits p 
+    {flex-basis: 70%;} /*espaço do paragrafo ocupa 70%*/
+
+/*3. Configure layout de flexbox para a seção de participação dessa forma:
+- Cada item ocupar 50% do espaço disponível.
+- O título ficará centralizado verticalmente.*/
+
+/*4. Inclua linha no topo e embaixo das seções de participação, com a propriedade border-bottom e border-top respectivamente.*/
+
+.participation
+{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: #1f295c solid 1px;
+}
+
+.participation h3,.participation p 
+{flex-basis: 50%;}
+
+.participation h3
+{align-self: center;}
+
+/*- Removida a ocorrência de borda duplicada entre as duas seções: benefícios e partipação*/
+  
+    
