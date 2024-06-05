@@ -1,0 +1,246 @@
+/* STYLE */
+html {
+    background: #bcecb6; /* Cor de fundo verde menta */
+    color: #ab3cb3; /* Cor para fonte (violeta) */
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif, Verdana, Tahoma, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+  }
+  
+  /* ESTILIZAÇÃO */
+  p {
+    text-indent: 1em;
+  }
+  
+  h1, h2, h3 {
+    color: grey; /* cor de destaque */
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  /* tamanho de cada título */
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  } 
+  
+  .summary {
+    text-align: right;
+  }
+  
+  .main p {
+    line-height: 1.5;
+  }
+  
+  abbr {
+    font-variant: small-caps;
+  }
+  
+  /* BOX MODEL */
+  
+  /* 1. Definir diretivas gerais da página. */
+  .page-wrapper {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto; 
+  }
+  
+  #zen-intro {
+    height: 550px;
+  }
+  
+  /* 2. Incrementar cabeçalho da página */
+  #zen-intro header {
+    background: #ab3cb3; /* Cor de fundo violeta */
+    color: #bcecb6; /* Cor de fonte verde-menta */
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  #design-archives { 
+    display: none; /* Remove da exibição e não do html */
+  }
+  
+  /* h1 e h2 lado a lado */
+  header h1, h2 {
+    display: inline-block; /* para manter o espaçamento vertical */
+  }
+  
+  header h1 {
+    margin-right: 1em; /* Espaçamento lateral do título h1 */
+  }
+  
+  /* 3. Incrementar menus */
+  aside ul {
+    list-style-type: none; /* não exibir o bullets(marcador) da lista */
+  }
+  
+  aside ul li {
+    margin: 1em; /* Espaçamento entre itens */
+    text-align: center; 
+  }
+  
+  /* 4. Aplicar inversão de cores no rodapé para ganhar contraste em relação à página */
+  .main footer {
+    margin-top: 4%; /* Espaçamento externo */
+  }
+  
+  .main footer a {
+    border:  rgb(131, 54, 123) solid 2px; /* Borda sólida */
+    padding: 0.5em; /* Espaçamento interno */
+    display: inline-block; /* considerar espaçamento da borda */
+    color: green; /* fonte do link do rodapé */
+  }
+  
+  /* POSICIONAMENTO */
+  
+  /* 1. Definir .page-wrapper referência para posicionamento */
+  .page-wrapper {
+    position: relative;
+  }
+  
+  /* 2. Fazer o painel .explanation ocupar 60% largura disponível */
+  .explanation {
+    width: 60%;
+    margin-right: 35%; /* Adiciona margem à direita */
+    border-right: #1f295c solid 1px; /* Adiciona borda à direita */
+    padding-right: 2%; /* Adiciona espaçamento interno à direita */
+  }
+  
+  /* 3. Movendo o menu de designs para a direita da página */
+  .design-selection {
+    position: absolute;
+    top: 460px; /* Melhor posicionamento verticalmente */
+    left: 62%; /* Melhor posicionamento, após o elemento .explanation horizontalmente */
+    width: 34%; /* largura */
+    padding-left:1%; 
+    padding-right:1%; /* Centralizando no espaçamento interno horizontal */
+  }
+  
+  /* FLEXBOX */
+  /* 1. Aplique o flexbox no rodapé da seção principal */
+  .supporting footer { 
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap:  wrap;
+  }
+  
+  footer a {
+    width: 100px; /* Define a largura desejada */
+    height: 30px; /* Define a altura desejada */
+    text-align: center; /* Centraliza o texto */
+    line-height: 30px; /* Garante que o texto esteja centralizado verticalmente */
+  }
+  
+  /* 2. Configure um layout de flexbox para a seção de benefícios dessa forma */
+  .benefits {
+    display: flex; /* layout flexbox seção de benefícios */
+    border-bottom: #1f295c solid 1px;
+  }
+  
+  .benefits h3 {
+    order: 2; /* ordem do título (à direita - posição 2) */
+    justify-content: space-evenly; /* centralizando verticalmente */
+    flex-basis: 30%;
+    align-self: center; /* alinhamento do titulo */
+  }
+      
+  .benefits p {
+    flex-basis: 70%; /* espaço do paragrafo ocupa 70% */
+  }
+  
+  /* 3. Configure layout de flexbox para a seção de participação dessa forma */
+  .participation {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: #1f295c solid 1px;
+    border-bottom: #1f295c solid 1px;
+  }
+  
+  .participation h3, .participation p { 
+    flex-basis: 50%; 
+  }
+  
+  .participation h3 { 
+    align-self: center; 
+  }
+  
+  /* PSEUDOCLASSES */
+  /* 1. Customizar a aparência dos links */
+  a {
+    color: grey;
+  }
+  
+  a:hover { 
+    color: rgb(47, 47, 47);
+  }
+  
+  .main p:first-of-type:first-letter {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3em; /* Ajusta o tamanho da primeira letra conforme necessário */
+    float:left; /* Move a primeira letra para a esquerda */
+    padding-right: 0.5em; /* Adicione um espaçamento após a primeira letra */
+  }
+  
+  .design-selection li {
+    border-top: #0b0b22 solid 1px;
+    padding-top: 5px;
+  }
+  
+  .design-selection li:last-of-type { 
+    border-bottom: #0b0b22 solid 1px;
+    padding-bottom: 5px;
+  }
+  
+  /* MEDIA QUERIES */
+  /* Zen Garden responsiva a dispositivos móveis! */
+  @media screen and (max-width: 768px) {
+    .design-selection {
+      position: static;
+      width: 100%;
+    }
+  
+    .explanation {
+      border-right: none;
+      width: 100%;
+    }
+  
+    #zen-intro {
+      height:auto 
+    }
+  
+    .participation {
+      flex-direction: column;
+    }
+  
+    p {
+      text-indent: 0;
+    }
+  
+  }
+  
+  /* MEDIA PRINT */
+  @media print {
+    html {
+      font-family: 'Times New Roman', Times, serif;
+    }
+  
+    #zen-intro header {
+      background-color: #bcecb6;
+      color:#ab3cb3;
+    }
+  
+    .design-selection {
+      position: static;
+      width: 100%;
+    }
+  
+    .explanation {
+      border-right: none;
+      width: 100%;
+    }
+  }
