@@ -125,8 +125,9 @@ _ Iniciar na parte superior da página, após a parte de introdução, ex: top:5
 #design-selection 
 {
     position: absolute;
-    top: 500px; /* Melhor posicionamento verticalmente*/
-    left: 60%; /* Melhor posicionamento, após o elemento .explanation horizontalmente*/
+    top: 460px; /* Melhor posicionamento verticalmente*/
+    left: 62%; /* Melhor posicionamento, após o elemento .explanation horizontalmente*/
+    width: 34%; /*largura
     padding-left:1%; 
     padding-right:1% /* Centralizando no espaçamento interno horizontal*/
 }
