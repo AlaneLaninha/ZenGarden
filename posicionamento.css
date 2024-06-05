@@ -13,7 +13,7 @@ html
 
  h1, h2, h3 /*estilização de títulos*/
  {
-  color: rgb(134, 116, 116);
+  color: grey; /*cor de destaque*/
   font-weight: 700;
   text-align: center;
  }
@@ -123,8 +123,9 @@ _ Iniciar na parte superior da página, após a parte de introdução, ex: top:5
 #design-selection 
 {
     position: absolute;
-    top: 532px; /* Melhor posicionamento verticalmente*/
-    left: 60%; /* Melhor posicionamento, após o elemento .explanation horizontalmente*/
+    top: 460px; /* Melhor posicionamento verticalmente*/
+    left: 62%; /* Melhor posicionamento, após o elemento .explanation horizontalmente*/
+    width: 34%; /*largura
     padding-left:1%; 
     padding-right:1% /* Centralizando no espaçamento interno horizontal*/
 }
